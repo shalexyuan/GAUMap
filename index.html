@@ -38,10 +38,10 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">GAMap: Zero-Shot Object Goal Navigation with Multi-Scale Geometric-Affordance Guidance</h1>
-            <div class="is-size-5 publication-authors">
+            <h1 class="title is-1 publication-title">Hierarchical Scoring with 3D Gaussian Splatting for Instance Image-Goal Navigation</h1>
+            <!-- <div class="is-size-5 publication-authors"> -->
               <!-- Paper authors -->
-              <span class="author-block">
+              <!-- <span class="author-block">
                 <a>Shuaihang Yuan</a>,</span>
                 <span class="author-block">
                   <a>Hao Huang</a>,</span>
@@ -54,31 +54,31 @@
                         <span class="author-block">
                           <a>Yi Fang</a>
                   </span>
-                  </div>
+                  </div> -->
 
-                  <div class="is-size-5 publication-authors">
+                  <!-- <div class="is-size-5 publication-authors">
                     <span class="author-block">NYUAD Center for Artificial Intelligence and Robotics (CAIR)<br>
                       New York University Abu Dhabi, Electrical Engineering<br>
                       New York University, Electrical & Computer Engineering Dept<br>
                       Embodied AI and Robotics (AIR) Lab<br>NeurIPS 2024</span>
-                  </div>
+                  </div> -->
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
+                  <!-- <div class="column has-text-centered">
+                    <div class="publication-links"> -->
                          <!-- Arxiv PDF link -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href="https://nips.cc/virtual/2024/poster/95755" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
                         <span>Paper</span>
-                      </a>
-                    </span>
+                      </a> -->
+                    <!-- </span> -->
 
 
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/shalexyuan/GAMap/tree/main" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -86,10 +86,10 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/pdf/2410.23978" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -97,8 +97,8 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
-            </div>
+              </span> -->
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -112,9 +112,9 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- Replacing video with a pipeline figure image -->
-      <img src="static/images/nips24_pipeline.png" alt="Pipeline Figure" width="100%">
+      <img src="static/images/pipeline.pdf" alt="Pipeline Figure" width="100%">
       <h2 class="subtitle has-text-centered">
-        Pipeline of the GAMap generation.
+        Pipeline of the proposed method.
       </h2>
     </div>
   </div>
@@ -129,20 +129,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Zero-Shot Object Goal Navigation (ZS-OGN) enables robots to navigate toward
-            objects of unseen categories without prior training. Traditional approaches often
-            leverage categorical semantic information for navigation guidance, which struggles
-            when only partial objects are observed or detailed and functional representations
-            of the environment are lacking. To resolve the above two issues, we propose
-            Geometric-part and Affordance Maps (GAMap), a novel method that integrates
-            object parts and affordance attributes for navigation guidance. Our method includes
-            a multi-scale scoring approach to capture geometric-part and affordance attributes
-            of objects at different scales. Comprehensive experiments conducted on the HM3D
-            and Gibson benchmark datasets demonstrate improvements in Success Rates and
-            Success weighted by Path Length, underscoring the efficacy of our geometric-part
-            and affordance-guided navigation approach in enhancing robot autonomy and
-            versatility, without any additional task-specific training or fine-tuning with the
-            semantics of unseen objects and/or the locomotions of the robot.
+            Instance Image-Goal Navigation (IIN) requires autonomous agents to identify and navigate to a target object or location depicted in a reference image captured from any viewpoint. While recent methods leverage powerful novel view synthesis (NVS) techniques, such as three-dimensional Gaussian splatting (3DGS), they typically rely on randomly sampling multiple viewpoints or trajectories to ensure comprehensive coverage of discriminative visual cues. This approach, however, creates significant redundancy through overlapping image samples and lacks principled view selection, substantially increasing both rendering and comparison overhead. In this paper, we introduce a novel IIN framework with a hierarchical scoring paradigm that estimates optimal viewpoints for target matching. Our approach integrates cross-level semantic scoring, utilizing CLIP-derived relevancy fields to identify regions with high semantic similarity to the target object class, with fine-grained local geometric scoring that performs precise pose estimation within promising regions. Extensive evaluations demonstrate that our method achieves state-of-the-art performance on simulated IIN benchmarks and real-world applicability.
           </p>
         </div>
       </div>
@@ -161,7 +148,30 @@
         <div class="column is-four-fifths">
           <div class="figure-display">
             <!-- Single Large Figure -->
-            <img src="static/images/nips_result1.png" alt="Result Figure 1" style="width:100%;">
+            <img src="static/images/navigation.pdf" alt="Result Figure 1" style="width:100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- YouTube Video Presentation -->
+
+</section>
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Results Figure Presentation. -->
+      <h2 class="title is-3">Results</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="figure-display">
+            <!-- Single Large Figure -->
+            <img src="static/images/extra_gaussian.pdf" alt="Hiericarial Scoring" style="width:100%;">
+            <h2 class="subtitle has-text-centered">
+              Hiericarial Scoring.
+            </h2>
           </div>
         </div>
       </div>
